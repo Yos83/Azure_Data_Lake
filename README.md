@@ -28,13 +28,13 @@ The goal of this project is to develop a data lake solution using Azure Databric
 
 ## TASK NEED TO COMPLETE
 ## Bike Dataset
-
-![Original Bike Dataset](https://github.com/user-attachments/assets/5d476c92-a71c-4695-a7a2-105b4af8f598)
+![Original Bike Dataset](https://github.com/user-attachments/assets/ead0b605-e5ac-4438-b2a9-67634fbdfd33)
 
 
 ## Task 1: Design Bikeshare Star Schema. Below is our star schema:
 
-[Bike_Star Scheme.pdf](https://github.com/user-attachments/files/18228233/Bike_Star.Scheme.pdf)
+![1_Start_Schema](https://github.com/user-attachments/assets/c4d48a93-228d-4ed5-92ce-4645b456d526)
+
 
  ## Task 2: Import the data into Azure Databricks using Delta Lake to create a Bronze data store
 1.	Create Azure Databricks Workspace (use the resource group already created
