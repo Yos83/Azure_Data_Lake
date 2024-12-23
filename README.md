@@ -53,67 +53,21 @@ The goal of this project is to develop a data lake solution using Azure Databric
 
 Load CSV files
 
-Payments
-payments_df = spark.read.format("csv") \
-    .option("inferSchema", "true") \
-    .option("header", "false") \
-    .option("sep", ",") \
-    .load("dbfs:/FileStore/tables/payments.csv") \
-    .toDF("payment_id","payment_date","amount","rider_id")	
+![3 1 Load CSV files](https://github.com/user-attachments/assets/1109ef01-5abd-4d5c-8b9e-a299392e707a)
 
-Riders
-riders_df = spark.read.format("csv") \
-    .option("inferSchema", "true") \
-    .option("header", "false") \
-    .option("sep", ",") \
-    .load("dbfs:/FileStore/tables/riders.csv") \
-    .toDF("rider_id", "first_name", "last_name", "address", "birthday", "account_start_date", "account_end_date", "is_member")
 
-Stations
-stations_df = spark.read.format("csv") \
-    .option("inferSchema", "true") \
-    .option("header", "false") \
-    .option("sep", ",") \
-    .load("dbfs:/FileStore/tables/stations.csv") \
-    .toDF("station_id", "name", "latitude", "longitude")
-
-Trips 
-trips_df = spark.read.format("csv") \
-    .option("inferSchema", "true") \
-    .option("header", "false") \
-    .option("sep", ",") \
-    .load("dbfs:/FileStore/tables/trips.csv") \
-    .toDF("trip_id", "rideable_type", "start_at", "ended_at", "start_station_id", "end_station_id", "rider_id")
 ![3 2_Import_data_to_DBFS](https://github.com/user-attachments/assets/b2f955c6-2d68-462e-9a4b-21bbdcdbda6b)
 
 
 3.2 Write into Dataframes Delta Lakes tables 
-Payments
-payments_df.write.format("delta") \
-    .mode("overwrite") \
-    .save("/delta/payments")
+![3 2_Write_into_Delta_locations](https://github.com/user-attachments/assets/1d114895-83c0-480d-bca1-5cfa34fa619a)
 
-Riders
-riders_df.write.format("delta") \
-    .mode("overwrite") \
-    .save("/delta/riders")
 
-Satations
-stations_df.write.format("delta") \
-    .mode("overwrite") \
-    .save("/delta/stations")
-
-Trips
-trips_df.write.format("delta") \
-    .mode("overwrite") \
-    .save("/delta/trips")
 
 3.3 Write Datagrams into bronze data lake
-delta_path = "/bronze"
-df_payments.write.format("delta").mode("overwrite").save(f"{delta_path}/payments")
-df_riders.write.format("delta").mode("overwrite").save(f"{delta_path}/riders")
-df_stations.write.format("delta").mode("overwrite").save(f"{delta_path}/stations")
-df_trips.write.format("delta").mode("overwrite").save(f"{delta_path}/trips")
+![3 3 Wirte Bromze data](https://github.com/user-attachments/assets/d3a5692d-9479-4ca5-aaf7-386e75030da4)
+
+
 
 ![3 3_Tables_into_Datalake](https://github.com/user-attachments/assets/dfbce5fb-d151-4f93-8c39-2842f0293e2d)
 
