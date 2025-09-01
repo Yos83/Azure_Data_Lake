@@ -63,7 +63,7 @@ Load CSV files
 
 ![3 3_Tables_into_Datalake](https://github.com/user-attachments/assets/dfbce5fb-d151-4f93-8c39-2842f0293e2d)
 
- ## 4.	Load Spark SQL from Delta tables
+ ## 4.	Staging tables- load Spark SQL from Delta tables
 
 ![4_Staging_tables](https://github.com/user-attachments/assets/dacc1a4a-2108-461d-9b06-c31b220bbf03)
 
